@@ -54,10 +54,10 @@ export function eventToSentryRequest(event: Event, api: API): SentryRequest {
     });
 
     const measureHeader = JSON.stringify({
-      type: 'measures',
+      type: 'measurements',
     });
 
-    const measurePayload = JSON.stringify({ measurements: { cls: 0.1, lcp: 32.129, 'lcp.elementSize': 4242 } });
+    const measurePayload = JSON.stringify({ foo: { value: 420.69 }, BAR: { value: 2020 } });
 
     const measureItem = `${measureHeader}\n${measurePayload}`;
 
